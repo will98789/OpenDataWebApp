@@ -1,7 +1,11 @@
 const electron = require('electron');
 const { app, BrowserWindow } = electron;
 
-function createWindow () {
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function createWindow () {
   // Create the browser window.
   const { width, height } = electron.screen.getPrimaryDisplay().workAreaSize
   let win = new BrowserWindow({
@@ -13,10 +17,13 @@ function createWindow () {
     }
   })
   // and load the index.html of the app.
-  win.loadFile('loading.html')
+  win.loadFile('loading.html');
+  await sleep(3000);
+  win.loadFile('index.html');
 }
 
-app.on('ready', createWindow)
+app.on('ready', createWindow);
+
 
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {
