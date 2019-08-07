@@ -2,6 +2,10 @@ body{
   background-color: #283747;
 }
 
+.loadIn {
+  animation: fadeIn 0.5s linear;
+}
+
 #loadingPicture{
   margin: 0;
   position: absolute;
