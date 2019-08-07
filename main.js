@@ -1,19 +1,30 @@
-const { app, BrowserWindow } = require('electron')
+const electron = require('electron');
+const { app, BrowserWindow } = electron;
 
-function createWindow () {
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function createWindow () {
   // Create the browser window.
+  const { width, height } = electron.screen.getPrimaryDisplay().workAreaSize
   let win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: width*0.8,
+    height: height*0.8,
     webPreferences: {
       nodeIntegration: true
     }
   })
   // and load the index.html of the app.
-  win.loadFile('loading.html')
+  win.loadFile('loading.html');
+  await sleep(3000);
+  win.loadFile('index.html');
+  let contents = win.webContents;
+  console.log(contents);
 }
 
-app.on('ready', createWindow)
+app.on('ready', createWindow);
+
 
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {
