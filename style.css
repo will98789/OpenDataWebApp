@@ -1,8 +1,16 @@
-body{
+.background_dark{
   background-color: #283747;
 }
 
+<<<<<<< Updated upstream
+.loadIn {
+  animation: fadeIn 0.5s linear;
+}
+
 #loadingPicture{
+=======
+.center{
+>>>>>>> Stashed changes
   margin: 0;
   position: absolute;
   top: 50%;
