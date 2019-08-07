@@ -5,7 +5,9 @@
   "scripts": {
     "start": "electron ."
   },
-  "dependencies": {},
+  "dependencies": {
+    "jquery": "^3.4.1"
+  },
   "author": "",
   "license": "ISC",
   "description": "",

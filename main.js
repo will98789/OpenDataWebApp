@@ -11,7 +11,6 @@ async function createWindow () {
   let win = new BrowserWindow({
     width: width*0.8,
     height: height*0.8,
-    frame: false,
     webPreferences: {
       nodeIntegration: true
     }
@@ -20,6 +19,8 @@ async function createWindow () {
   win.loadFile('loading.html');
   await sleep(3000);
   win.loadFile('index.html');
+  let contents = win.webContents;
+  console.log(contents);
 }
 
 app.on('ready', createWindow);
