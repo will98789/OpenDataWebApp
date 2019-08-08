@@ -79,3 +79,30 @@ div.menuIcon{
     from { opacity: 0; }
     to   { opacity: 1; }
 }
+
+#button{
+  display: inline-block;
+  flex:1;
+  border: none;
+  background: white;
+  height: 80vh;
+}
+
+.binder{
+
+}
+
+.docs{
+  margin: 0 5%;
+}
+
+.swan{
+
+}
+
+div.container{
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom:0%;
+  display:flex;
+}
