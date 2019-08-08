@@ -1,0 +1,525 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Histogram Analyser · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="histogram-analyser-2.html" />
+    
+    
+    <link rel="prev" href="data-and-simulated-data.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    intro
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="get_started.html">
+            
+                <a href="get_started.html">
+            
+                    
+                    Get Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="atlas_detector.html">
+            
+                <a href="atlas_detector.html">
+            
+                    
+                    ATLAS Detector
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="atlas_events.html">
+            
+                <a href="atlas_events.html">
+            
+                    
+                    ATLAS events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="the-higgs-boson.html">
+            
+                <a href="the-higgs-boson.html">
+            
+                    
+                    The Higgs Boson
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="analyses.html">
+            
+                <a href="analyses.html">
+            
+                    
+                    Analyses
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="data-and-simulated-data.html">
+            
+                <a href="data-and-simulated-data.html">
+            
+                    
+                    Data and Simulated Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="the_display_histograms.html">
+            
+                <a href="the_display_histograms.html">
+            
+                    
+                    Histogram Analyser
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="histogram-analyser-2.html">
+            
+                <a href="histogram-analyser-2.html">
+            
+                    
+                    Histogram Analyser 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="separate_signals.html">
+            
+                <a href="separate_signals.html">
+            
+                    
+                    Separate Signals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="find_the_higgs_2.html">
+            
+                <a href="find_the_higgs_2.html">
+            
+                    
+                    Find the Higgs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="app_histo_01.html">
+            
+                <a href="app_histo_01.html">
+            
+                    
+                    App Histograms #1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="app_histo_02.html">
+            
+                <a href="app_histo_02.html">
+            
+                    
+                    App Histograms #2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="variable_names.html">
+            
+                <a href="variable_names.html">
+            
+                    
+                    ROOTbrowser Variable Names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="root_browser_final_plots.html">
+            
+                <a href="root_browser_final_plots.html">
+            
+                    
+                    ROOTbrowser final plots
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="top.html">
+            
+                <a href="top.html">
+            
+                    
+                    Top Quark Pair Analysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="GLOSSARY.html">
+            
+                <a href="GLOSSARY.html">
+            
+                    
+                    Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="particle-physics-masterclasses.html">
+            
+                <a href="particle-physics-masterclasses.html">
+            
+                    
+                    Particle Physics Masterclasses
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Histogram Analyser</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="histogram-analyser">Histogram Analyser</h1>
+<p>Physicists use <strong>cuts</strong> to select events of interest.  Cuts preferentially remove the unwanted processes (<a href="GLOSSARY.html#background" class="glossary-term" title="Data contains both signal and background events.  Background events are rejected so that the desired physics processes can be observed.">background</a>) but leave as much as possible of the desired process (<a href="GLOSSARY.html#signal" class="glossary-term" title="High-energy physicists, whether making a precise measurement of a known quantity or searching for hypothetical new particles, select from the sample of events recorded those with characteristics resembling those of the desired signal, while rejecting as many non-signal events (background) as possible.">signal</a>).  It is useful to have a good understanding of the physics processes involved when applying cuts.</p>
+<p>We have created two Histogram Analysers, to help visualise the data:
+The first Histogram Analyser displays just simulated events.<br>The second Histogram Analyser displays both real data and simulated events.  Both histogram analysers display four physics processes.</p>
+<p>The four processes are <script type="math/tex; ">H\rightarrow W^+W^-</script>, <script type="math/tex; ">WW</script>, <script type="math/tex; ">t\bar t</script> and <script type="math/tex; ">Z</script>.<br>These processes are discussed in the next chapter.  Each process is represented by a different colour in Histogram Analyser.</p>
+<h2 id="make-cuts-using-your-cursor">Make cuts using your cursor.</h2>
+<p>Use the cursor to select a specific range in one of the histograms.<br>The selected ranges will be coloured, whilst non-selected ranges will be greyed out.  When you make cuts on a variable the relative contributions of the four processes will change.</p>
+<p><strong>To clear your selection on a specific histogram click on the white <a href="GLOSSARY.html#background" class="glossary-term" title="Data contains both signal and background events.  Background events are rejected so that the desired physics processes can be observed.">background</a> within the histogram area. </strong></p>
+<p><strong>To clear all your selections click on &quot;Histogram Analyser&quot; under Get Started in the main top menu.</strong></p>
+<h2 id="the-histograms-explained">The histograms explained</h2>
+<p><strong>Higgs to WW - simulated data</strong>
+Histogram Analyser displays nine histograms.  The description of each follows.</p>
+<h2 id="expected-number-of-events-for-1fb">Expected Number of Events for 1/fb</h2>
+<p>This histogram shows the number of events expected to be detected, reconstructed and recorded by ATLAS for 1 inverse femtobarn (1/fb) of data.<br>One inverse femtobarn corresponds to approximately 100 trillion proton-proton collisions.</p>
+<p>The expected number of events reconstructed and recorded by ATLAS is different to the number of events produced.<br>Some events will not be reconstructed due to the way the detector is constructed, the resolution of the sub-detectors, reconstruction efficiency and other inefficiencies.</p>
+<p><img src="pictures/NumbersNoSelection.jpg" alt=""></p>
+<p>With no cuts, we have seventeen <script type="math/tex; ">H\rightarrow W^+W^-</script> events, with a total <a href="GLOSSARY.html#background" class="glossary-term" title="Data contains both signal and background events.  Background events are rejected so that the desired physics processes can be observed.">background</a> of 613349 events.  The majority of the <a href="GLOSSARY.html#background" class="glossary-term" title="Data contains both signal and background events.  Background events are rejected so that the desired physics processes can be observed.">background</a> is <script type="math/tex; ">Z</script> <a href="GLOSSARY.html#boson" class="glossary-term" title="A subatomic particle, such as a photon, which has zero or integral spin and follows a statistical description given by S.N. Bose and Einstein.">boson</a> production.</p>
+<p>The <strong>significance</strong> of the  <script type="math/tex; ">H\rightarrow W^+W^-</script> events quantifies how &quot;significant&quot; the Higgs sample is with respect to the <a href="GLOSSARY.html#background" class="glossary-term" title="Data contains both signal and background events.  Background events are rejected so that the desired physics processes can be observed.">background</a>.  It is calculated by <script type="math/tex; ">(\text{Number of } H\rightarrow W^+W^- \text{events}) / \sqrt{\text{Number of background events}}</script>).<br><strong>The larger the significance value is, the better job you have done extracting the Higgs <a href="GLOSSARY.html#signal" class="glossary-term" title="High-energy physicists, whether making a precise measurement of a known quantity or searching for hypothetical new particles, select from the sample of events recorded those with characteristics resembling those of the desired signal, while rejecting as many non-signal events (background) as possible.">signal</a></strong>.</p>
+<h2 id="channel">Channel</h2>
+<p><img src="pictures/channel.jpg" alt=""></p>
+<p>The leptonic decay channels are shown here: dielectron (ee), dimuon (mm) and electron-muon (em).<br>Decays to taus or hadrons are not considered in Histogram Analyser.</p>
+<p>Histogram Analyser showing just simulated data, displays three leptonic channels.  Histogram Analyser showing simulated and real data, displays just the electron-muon <a href="GLOSSARY.html#channel" class="glossary-term" title="The decay channel signifies a certain route a physics process has taken.">channel</a>, so this histogram is not displayed.</p>
+<h2 id="reconstructed-dilepton-mass-gev">Reconstructed Dilepton Mass [GeV]</h2>
+<p>This histogram displays the mass reconstructed from the two leptons in the final state.</p>
+<p><img src="pictures/DiLeptonMassNoCuts.png" alt=""></p>
+<p>With no cuts, this peaks at 90 GeV, due the huge <a href="http://pdg.lbl.gov/2012/listings/rpp2012-list-z-boson.pdf" target="_blank"><script type="math/tex; ">Z</script> boson</a> contribution.</p>
+<p><img src="pictures/MassCutLess75.png" alt=""><br><img src="pictures/NumbersMassCutLess75.png" alt=""></p>
+<p>We can remove a large number of <script type="math/tex; ">Z</script> <a href="GLOSSARY.html#boson" class="glossary-term" title="A subatomic particle, such as a photon, which has zero or integral spin and follows a statistical description given by S.N. Bose and Einstein.">boson</a> events by selecting <strong>Reconstructed Dilepton Mass</strong>to be less than 75 GeV, whilst hardly touching our Higgs <a href="GLOSSARY.html#signal" class="glossary-term" title="High-energy physicists, whether making a precise measurement of a known quantity or searching for hypothetical new particles, select from the sample of events recorded those with characteristics resembling those of the desired signal, while rejecting as many non-signal events (background) as possible.">signal</a>.<br>The <script type="math/tex; ">H\rightarrow W^+W^-</script> sample significance increases from 0.021 to 0.110 with this cut.<br>It is thus a useful quantity to use to reduce the huge <script type="math/tex; ">Z</script> <a href="GLOSSARY.html#boson" class="glossary-term" title="A subatomic particle, such as a photon, which has zero or integral spin and follows a statistical description given by S.N. Bose and Einstein.">boson</a> <a href="GLOSSARY.html#background" class="glossary-term" title="Data contains both signal and background events.  Background events are rejected so that the desired physics processes can be observed.">background</a>.</p>
+<h2 id="number-of-jets">Number of Jets</h2>
+<p>Number of jets found in the <a href="GLOSSARY.html#event" class="glossary-term" title="An event is a snapshot of a collision in the LHC. Energy is equivalent to mass, so highly energetic collisions can create particles more massive than those involved in the collisions (protons, in the case of the LHC). These massive particles quickly decay into lighter stable particles. Physicists study the decay products of collisions to determine what particles were created in the events.">event</a>.</p>
+<p><img src="pictures/2plusJets.jpg" alt=""></p>
+<p><img src="pictures/Nevents2plusJets.jpg" alt=""></p>
+<p>When selecting two or more jets we see that the <script type="math/tex; ">Z</script> <a href="GLOSSARY.html#boson" class="glossary-term" title="A subatomic particle, such as a photon, which has zero or integral spin and follows a statistical description given by S.N. Bose and Einstein.">boson</a> contribution decreases (from 611276 to 25422) and the <script type="math/tex; ">t\bar{t}</script> contribution becomes more important.</p>
+<p>Selecting two or more jets, the ratio of ttbar to <script type="math/tex; ">Z</script> events increases from 1334/611276 = 0.002 to 1038/25422 = 0.04 and the green ttbar contribution is now noticeable in the histograms.</p>
+<p>Top-quark pair production leads to <script type="math/tex; ">WW</script>+jets final states.</p>
+<h2 id="are-jets-b-tagged">Are Jets b-tagged?</h2>
+<p>Jets originating from <script type="math/tex; ">b</script>-quarks are identified and labelled, or <strong>tagged</strong>, using so-called b-tagging algorithms.</p>
+<p><img src="pictures/Btag.jpg" alt=""><br><img src="pictures/nEventsBtagged.png" alt=""><br><img src="pictures/BtaggedYes.jpg" alt=""><br><img src="pictures/nEventsBtagged.jpg" alt=""></p>
+<p><script type="math/tex; ">b</script>-tagged jets are expected in top quark decays, but not in leptonic <script type="math/tex; ">W</script> or <script type="math/tex; ">Z</script> <a href="GLOSSARY.html#boson" class="glossary-term" title="A subatomic particle, such as a photon, which has zero or integral spin and follows a statistical description given by S.N. Bose and Einstein.">boson</a> decays.</p>
+<p>Selecting &apos;Are Jets b-tagged&apos; as yes, the ratio of ttbar to <script type="math/tex; ">Z</script> events increases from 1334/611276 = 0.002 to 1041/7227 = 0.14 and the green ttbar contribution is now noticeable in the histograms.</p>
+<h2 id="missing-transverse-momentum-met-gev">Missing Transverse Momentum (MET) [GeV]</h2>
+<p>In the LHC, the initial energy of the colliding partons (quarks or gluons) along the beam axis is not known.<br>This is due to the energy of each proton being shared and constantly exchanged between its constituents.</p>
+<p>However, the initial momentum of particles travelling transverse to the beam axis is zero.<br>Therefore, any net momentum in the transverse direction indicates missing transverse momentum.</p>
+<p>Missing transverse momentum is used to infer the presence of non-detectable particles such as the neutrino.<br>It is also expected to be a signature of many predicted physics events beyond the Standard Model, for example the lightest <a href="http://home.cern/scientists/updates/2013/10/supersymmetry-searches-atlas" target="_blank">supersymmetric</a> particle.</p>
+<p>The standard abbreviation for missing transverse momentum is MET, for historical reasons.</p>
+<p><img src="pictures/MET100.jpg" alt=""><br><img src="pictures/NeventsMET100.jpg" alt=""></p>
+<p><script type="math/tex; ">Z</script> <a href="GLOSSARY.html#boson" class="glossary-term" title="A subatomic particle, such as a photon, which has zero or integral spin and follows a statistical description given by S.N. Bose and Einstein.">boson</a> decays to charged leptons do not have any neutrinos in the final state while the other processes do.<br>That is why requiring missing transverse momentum removes <script type="math/tex; ">Z</script> <a href="GLOSSARY.html#boson" class="glossary-term" title="A subatomic particle, such as a photon, which has zero or integral spin and follows a statistical description given by S.N. Bose and Einstein.">boson</a> events.</p>
+<p>Select missing transverse momentum and watch how the ratio of <script type="math/tex; ">WW</script> and ttbar to <script type="math/tex; ">Z</script> events changes.</p>
+<h2 id="total-lepton-transverse-momentum-gev">Total Lepton Transverse Momentum [GeV]</h2>
+<p>This is the <a href="https://en.wikipedia.org/wiki/Euclidean_vector#Addition_and_subtraction" target="_blank">vectorial sum</a> of the transverse momenta of the observed charged leptons.</p>
+<p><img src="pictures/PTZ.jpg" alt=""></p>
+<p>For <script type="math/tex; ">Z</script> <a href="GLOSSARY.html#boson" class="glossary-term" title="A subatomic particle, such as a photon, which has zero or integral spin and follows a statistical description given by S.N. Bose and Einstein.">boson</a> events, total lepton transverse momentum peaks at zero since the transverse momenta of both leptons cancel each other.</p>
+<p><img src="pictures/PTttbar.jpg" alt=""></p>
+<p><img src="pictures/PTWW.png" alt=""><br><img src="pictures/PTHWW.jpg" alt=""></p>
+<p>For the other processes this cancellation is not as pronounced.<br>Their distributions peak at between 30 and 80 GeV.</p>
+<h2 id="opening-angle-between-leptons-phi">Opening Angle Between Leptons [phi]</h2>
+<p><img src="pictures/OpeningAngleLeptons.jpg" alt=""></p>
+<p>This is the <a href="GLOSSARY.html#opening-angle" class="glossary-term" title="The opening angle (also called angular separation) between physics objects e.g.lepton pair, can be important in understanding or identifying different physics processes.  It is calculated as a function of eta and phi.">opening angle</a>, measured in phi (&#x1D719;), between the two leptons.<br>The azimuthal angle <script type="math/tex; ">\phi</script> is measured from the <script type="math/tex; ">x</script>-axis, around the beam.</p>
+<p>In the <a href="GLOSSARY.html#event" class="glossary-term" title="An event is a snapshot of a collision in the LHC. Energy is equivalent to mass, so highly energetic collisions can create particles more massive than those involved in the collisions (protons, in the case of the LHC). These massive particles quickly decay into lighter stable particles. Physicists study the decay products of collisions to determine what particles were created in the events.">event</a> display above, two lepton tracks are displayed in red and the <a href="GLOSSARY.html#opening-angle" class="glossary-term" title="The opening angle (also called angular separation) between physics objects e.g.lepton pair, can be important in understanding or identifying different physics processes.  It is calculated as a function of eta and phi.">opening angle</a> between the two leptons is marked in blue.</p>
+<p><img src="pictures/OpeningAngleLeptons.png" alt=""></p>
+<p>If the leptons are emitted back-to-back, this is displayed on the histogram as 180 degrees.<br><script type="math/tex; ">H\rightarrow W^+W^-</script>events show a peak at low values in contrast to all other processes.</p>
+<h2 id="opening-angle-between-met-and-leptons-phi">Opening Angle Between MET and Leptons [phi]</h2>
+<p>This is the <a href="GLOSSARY.html#opening-angle" class="glossary-term" title="The opening angle (also called angular separation) between physics objects e.g.lepton pair, can be important in understanding or identifying different physics processes.  It is calculated as a function of eta and phi.">opening angle</a>, measured in phi (&#x1D719;), between the missing transverse momentum (MET) and the two leptons.</p>
+<p><img src="pictures/OpeningAngleMETleptoms.jpg" alt=""></p>
+<p>In the <a href="GLOSSARY.html#event" class="glossary-term" title="An event is a snapshot of a collision in the LHC. Energy is equivalent to mass, so highly energetic collisions can create particles more massive than those involved in the collisions (protons, in the case of the LHC). These massive particles quickly decay into lighter stable particles. Physicists study the decay products of collisions to determine what particles were created in the events.">event</a> display above, missing transverse energy is displayed by the dotted yellow line.  The midline between the two lepton tracks (the direction of the <a href="GLOSSARY.html#vectorial-sum" class="glossary-term" title="A vectorial sum is the result of adding two or more vectors together via vector addition.">vectorial sum</a> of their transverse momenta) is represented by the dotted red line.  The <a href="GLOSSARY.html#opening-angle" class="glossary-term" title="The opening angle (also called angular separation) between physics objects e.g.lepton pair, can be important in understanding or identifying different physics processes.  It is calculated as a function of eta and phi.">opening angle</a> between the MET and leptons is shown in yellow.</p>
+<p>Events with <script type="math/tex; ">t\bar t</script> and <script type="math/tex; ">Z</script> show a relatively flat distribution in this variable whereas <script type="math/tex; ">H\rightarrow W^+W^-</script> and <script type="math/tex; ">WW</script> peak at large values.</p>
+<p>This is a useful discriminant to remove <a href="GLOSSARY.html#background" class="glossary-term" title="Data contains both signal and background events.  Background events are rejected so that the desired physics processes can be observed.">background</a> events.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="data-and-simulated-data.html" class="navigation navigation-prev " aria-label="Previous page: Data and Simulated Data">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="histogram-analyser-2.html" class="navigation navigation-next " aria-label="Next page: Histogram Analyser 2">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Histogram Analyser","level":"1.8","depth":1,"next":{"title":"Histogram Analyser 2","level":"1.9","depth":1,"path":"histogram-analyser-2.md","ref":"histogram-analyser-2.md","articles":[]},"previous":{"title":"Data and Simulated Data","level":"1.7","depth":1,"path":"data-and-simulated-data.md","ref":"data-and-simulated-data.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mathjax","youtube","mathjax"],"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6-latest"},"youtube":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"the_display_histograms.md","mtime":"2017-11-02T20:39:57.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-11-03T01:41:33.360Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
