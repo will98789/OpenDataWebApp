@@ -17,7 +17,7 @@ async function createWindow () {
   })
   // and load the index.html of the app.
   win.loadFile('loading.html');
-  await sleep(2500);
+  await sleep(100);
   win.loadFile('index.html');
   let contents = win.webContents;
   console.log(contents);
