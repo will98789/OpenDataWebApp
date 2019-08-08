@@ -4,24 +4,17 @@
     <meta charset="UTF-8">
     <title>Hello World!!</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="index.js"></script>
   </head>
   <body class="loadIn">
-    <div class="menuRow center">
-      <div class="menuButton">
-        <h1 class="menuText">
-          Interactive
-        </h1>
-      </div>
-      <div class="menuButton">
-        <h1 class="menuText">
-          Docs
-        </h1>
-      </div>
-      <div class="menuButton">
-        <h1 class="menuText">
-          Notebooks
-        </h1>
-      </div>
+    <img id="menuIcon" src="assets/menu_icon.svg" onclick="openNav()"/>
+    <div id="sideNav" class="sideNav">
+      <h1>Navigation</h1>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#">2</a>
+      <a href="#">4</a>
     </div>
   </body>
 </html>
