@@ -24,11 +24,25 @@ body{
   animation: fadein 3s;
 }
 
+.header{
+  height: 33%;
+  display: inline-block;
+  margin-top: 2%;
+  margin-bottom: 4%;
+}
+
+#logoImage{
+  display: inline-block;
+  margin-left: 50%;
+  margin-right: 50%;
+}
+
 div.menuIcon{
   content: url("assets/menuicon_1.png");
   width: 5%;
   object-fit: fill;
   transition: 0.5s;
+  position: fixed;
 }
 
 .menuIcon:hover{
@@ -84,8 +98,16 @@ div.menuIcon{
   display: inline-block;
   flex:1;
   border: none;
-  background: white;
-  height: 80vh;
+  background-color: #0B80C3;
+  height: 40vh;
+  border-radius: 3%;
+  color: #FCF7F8;
+  transition: 0.2s;
+}
+
+#button:hover{
+  background-color: #FCF7F8;
+  color: #0B80C3;
 }
 
 .binder{
@@ -103,6 +125,6 @@ div.menuIcon{
 div.container{
   width: 90%;
   margin-left: 5%;
-  margin-bottom:0%;
+  margin-top:0%;
   display:flex;
 }
