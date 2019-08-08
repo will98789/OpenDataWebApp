@@ -24,14 +24,15 @@ body{
   animation: fadein 3s;
 }
 
-#menuIcon{
-  position: fixed;
-  width: 7%;
-  transition: 0.2s;
+div.menuIcon{
+  content: url("assets/menuicon_1.png");
+  width: 5%;
+  object-fit: fill;
+  transition: 0.5s;
 }
 
-#menuIcon:hover{
-  width: 8%;
+.menuIcon:hover{
+  content: url("assets/menuicon_2.png");
 }
 
 /* The side navigation menu */
