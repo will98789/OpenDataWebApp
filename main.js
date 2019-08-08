@@ -32,7 +32,7 @@ async function createWindow () {
   iwin.hide();
   iwin.loadFile('index.html');
   iwin.setPosition(win.getPosition()[0],win.getPosition()[1]);
-  iwin.setSize(0,height*0.8);
+  iwin.setSize(width*0.8,height*0.8);
   iwin.show();
   win.close()
 }
