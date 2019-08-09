@@ -180,16 +180,22 @@ div.container{
   overflow: scoll;
   text-decoration: none;
   height: 50vh;
+  color: black;
 }
 
-.scrollBox ul{
-  padding-inline-start: 0px !important;
-  list-style: none;
+.scrollBox table{
+  border-style: none;
+  display: table;
+}
+
+.scrollBox tbody{
+  display: table;
+  width: 100%;
 }
 
 .docListItem{
-  height: 10vh;
-  line-height: 10vh;
+  height: auto;
+  line-height: 6vh;
   padding-left: 5%;
   padding-right: 5%;
 }

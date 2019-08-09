@@ -17,6 +17,6 @@ function getDocs(){
   var list = document.getElementById("docList");
   for(var i = 0; i < files.length; i++){
     var json = JSON.parse(fs.readFileSync('docs/'+files[i]+'/info.json', 'utf8'));
-    list.innerHTML += "<li><a href='docs/"+files[i]+"/index.html><div class='docListItem'>"+files[i]+json.description+"</div></a></li>";
+    list.innerHTML += "<tr onclick=\"location.href='docs/"+files[i]+"/index.html'\" class='docListItem'><td><b>"+json.docName+"</b></td><td>"+json.description+"</td></tr>";
   }
 }
