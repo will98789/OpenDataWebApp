@@ -2,21 +2,23 @@
 <html>
   <head>
     <title>Docs</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
-  <script src="index.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css">
   <body onload="getDocs()">
-    <div class="container">
-      <div class="header">
+    <div>
+      <div class="title">
         <h1>Documentation</h1>
       </div>
       <div class="content">
-        <p>
+        <p style="margin-left: 5%;">
           Please select documentation to look at:
-          </p>
+        </p>
+        <div class="scrollBox">
           <ul id="docList">
-            </ul>
+          </ul>
         </div>
+      </div>
     </div>
   </body>
 </html>
