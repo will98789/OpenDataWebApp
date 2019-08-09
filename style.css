@@ -2,9 +2,15 @@
 Dark blue: 283747
 Snow white: FCF7F8*/
 
+@font-face {
+  font-family: OpenSans;
+  src: url(assets/OpenSans-Regular.ttf url);
+}
+
 body{
   background-color: #283747 ;
-  font-family: 'Open Sans', sans-serif;
+  color: #FCF7F8;
+  font-family: OpenSans, sans-serif;
 }
 
 .background_dark{
@@ -27,6 +33,7 @@ body{
 
 .header{
   height: 25vh;
+  width: 100%;
   display: inline-block;
   margin-top: 2%;
   margin-bottom: 4%;
@@ -83,7 +90,7 @@ div.menuIcon{
 
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 25px;
   font-size: 36px;
