@@ -24,7 +24,7 @@ async function createWindow () {
   let iwin = new BrowserWindow({
     width: 0,
     height: height*0.8,
-    frame: false,
+    frame: true,
     webPreferences: {
       nodeIntegration: true
     }
