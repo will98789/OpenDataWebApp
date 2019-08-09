@@ -2,8 +2,15 @@
 Dark blue: 283747
 Snow white: FCF7F8*/
 
+@font-face {
+  font-family: OpenSans;
+  src: url(assets/OpenSans-Regular.ttf url);
+}
+
 body{
   background-color: #283747 ;
+  color: #FCF7F8;
+  font-family: OpenSans, sans-serif;
 }
 
 .background_dark{
@@ -25,29 +32,31 @@ body{
 }
 
 .header{
-  height: 33%;
+  height: 25vh;
+  width: 100%;
   display: inline-block;
   margin-top: 2%;
   margin-bottom: 4%;
 }
 
-#logoImage{
+.logoImage{
   display: inline-block;
-  margin-left: 50%;
-  margin-right: 50%;
+  float:left;
+  width: 25%;
+  margin-left: 12.5%;
+  margin-right: 12.5%  ;
 }
 
 div.menuIcon{
-  content: url("assets/menuicon_1.png");
-  width: 5%;
+  content: url("assets/menu_icon.svg");
+  width: 3%;
   object-fit: fill;
+  margin-top: 1%;
+  margin-left: 1%;
   transition: 0.5s;
   position: fixed;
 }
 
-.menuIcon:hover{
-  content: url("assets/menuicon_2.png");
-}
 
 /* The side navigation menu */
 .sideNav {
@@ -81,7 +90,7 @@ div.menuIcon{
 
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 25px;
   font-size: 36px;
@@ -103,11 +112,16 @@ div.menuIcon{
   border-radius: 3%;
   color: #FCF7F8;
   transition: 0.2s;
+  font-size: 30px;
 }
 
 #button:hover{
   background-color: #FCF7F8;
   color: #0B80C3;
+}
+
+#button:focus{
+  outline:0;
 }
 
 .binder{
