@@ -40,7 +40,7 @@ body{
   right:0;
   display: inline-block;
   margin-top: 2%;
-  margin-bottom: 4%;
+  margin-bottom: 1%;
 }
 
 .title{
@@ -53,9 +53,9 @@ body{
 .logoImage{
   display: inline-block;
   float:left;
-  width: 25%;
-  margin-left: 12.5%;
-  margin-right: 12.5%  ;
+  width: 20%;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 div.menuIcon{
@@ -114,7 +114,7 @@ div.menuIcon{
     to   { opacity: 1; }
 }
 
-#button{
+.button{
   display: inline-block;
   flex:1;
   border: none;
@@ -126,25 +126,43 @@ div.menuIcon{
   font-size: 30px;
 }
 
-#button:hover{
+.button:hover{
   background-color: #FCF7F8;
   color: #0B80C3;
 }
 
-#button:focus{
+.button:focus{
   outline:0;
 }
 
-.binder{
-
+#interactive{
+  content:url("assets/interactive.png");
+  margin-top:10%;
+  width: 25%;
+  margin-left: 37.5%;
+}
+#buttoni:hover #interactive{
+   content:url("assets/interactive_dark.png");
 }
 
-.docs{
-  margin: 0 5%;
+#docs{
+  content:url("assets/docs.png");
+  width:30%;
+  margin-left:35%;
+  margin-top:15%;
+}
+#buttond:hover #docs{
+  content:url("assets/docs_dark.png")
 }
 
-.swan{
-
+#jupyter{
+  content:url("assets/jupyter_light.png");
+  width:30%;
+  margin-left:35%;
+  margin-top: 13%;
+}
+#buttonj:hover #jupyter{
+  content:url("assets/jupyter.png")
 }
 
 div.container{

@@ -2,7 +2,7 @@
 
 **Clone and run for a quick way to see Electron in action.**
 
-This is a set of minimal Electron applications based on the [Quick Start Guide](http://electron.atom.io/docs/tutorial/quick-start) within the Electron documentation and the [GitBook](https://cheatham1.gitbooks.io) project and the [ROOTJS project](https://github.com/root-project/jsroot/)
+This is a set of minimal Electron applications based on the [Quick Start Guide](http://electron.atom.io/docs/tutorial/quick-start) within the Electron documentation and the [ROOTJS project](https://github.com/root-project/jsroot/)
 
 
 Any basic Electron application needs just these files:
