@@ -14,7 +14,7 @@ body{
 }
 
 .container{
-
+  margin-right: 5%;
 }
 
 .background_dark{
@@ -36,11 +36,11 @@ body{
 }
 
 .header{
-  left:0;
-  right:0;
   display: inline-block;
+  margin-left: 25%;
+  margin-right:25%;
   margin-top: 2%;
-  margin-bottom: 1%;
+  margin-bottom: 2%;
 }
 
 .title{
@@ -51,11 +51,7 @@ body{
 }
 
 .logoImage{
-  display: inline-block;
-  float:left;
-  width: 20%;
-  margin-left: 15%;
-  margin-right: 15%;
+  width: 100%;
 }
 
 div.menuIcon{
@@ -119,8 +115,8 @@ div.menuIcon{
   flex:1;
   border: none;
   background-color: #0B80C3;
-  height: 40vh;
-  border-radius: 3%;
+  min-height: 250px;
+  height:50vh;
   color: #FCF7F8;
   transition: 0.2s;
   font-size: 30px;
@@ -135,15 +131,6 @@ div.menuIcon{
   outline:0;
 }
 
-#interactive{
-  content:url("assets/interactive.png");
-  margin-top:10%;
-  width: 25%;
-  margin-left: 37.5%;
-}
-#buttoni:hover #interactive{
-   content:url("assets/interactive_dark.png");
-}
 
 #docs{
   content:url("assets/docs.png");
@@ -151,15 +138,24 @@ div.menuIcon{
   margin-left:35%;
   margin-top:15%;
 }
-#buttond:hover #docs{
-  content:url("assets/docs_dark.png")
+#interactive{
+  content:url("assets/interactive.png");
+  width: 25%;
+  margin-left: 37.5%;
+  margin-top:10%;
 }
-
 #jupyter{
   content:url("assets/jupyter_light.png");
   width:30%;
   margin-left:35%;
   margin-top: 13%;
+}
+
+#buttoni:hover #interactive{
+   content:url("assets/interactive_dark.png");
+}
+#buttond:hover #docs{
+  content:url("assets/docs_dark.png")
 }
 #buttonj:hover #jupyter{
   content:url("assets/jupyter.png")
