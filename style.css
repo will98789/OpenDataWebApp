@@ -13,6 +13,10 @@ body{
   font-family: OpenSans, sans-serif;
 }
 
+.container{
+
+}
+
 .background_dark{
   background-color: #283747;
 }
@@ -32,11 +36,18 @@ body{
 }
 
 .header{
-  height: 25vh;
-  width: 100%;
+  left:0;
+  right:0;
   display: inline-block;
   margin-top: 2%;
   margin-bottom: 4%;
+}
+
+.title{
+  margin-top: 4vh;
+  margin-bottom: 5vh;
+  width:100%;
+  text-align: center;
 }
 
 .logoImage{
@@ -141,4 +152,34 @@ div.container{
   margin-left: 5%;
   margin-top:0%;
   display:flex;
+}
+
+.scrollBox{
+  margin-left: 6%;
+  margin-right: 6%;
+  background-color: #FCF7F8;
+  border-radius: 2px;
+  overflow: scoll;
+  text-decoration: none;
+  height: 50vh;
+}
+
+.scrollBox ul{
+  padding-inline-start: 0px !important;
+  list-style: none;
+}
+
+.docListItem{
+  height: 10vh;
+  line-height: 10vh;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.docListItem:hover{
+  background-color: #f8edef;
+}
+
+.content{
+  width: 100%;
 }
