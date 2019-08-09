@@ -1,6 +1,5 @@
 const electron = require('electron');
 const { app, BrowserWindow } = electron;
-var currentWindow;
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -10,20 +9,20 @@ async function createWindow () {
   // Create the browser window.
   const { width, height } = electron.screen.getPrimaryDisplay().workAreaSize
   let win = new BrowserWindow({
-    width: width*0.8,
-    height: height*0.8,
+    width: width*0.9,
+    height: height*0.9,
     frame: false,
     webPreferences: {
       nodeIntegration: true
     }
   })
+  win.center();
   // and load the index.html of the app
-  currentWindow = win;
   win.loadFile('loading.html');
   await sleep(500);
   let iwin = new BrowserWindow({
-    width: 0,
-    height: height*0.8,
+    width: width*0.9,
+    height: height*0.9,
     frame: true,
     webPreferences: {
       nodeIntegration: true
@@ -32,7 +31,6 @@ async function createWindow () {
   iwin.hide();
   iwin.loadFile('index.html');
   iwin.setPosition(win.getPosition()[0],win.getPosition()[1]);
-  iwin.setSize(width*0.8,height*0.8);
   iwin.show();
   win.close()
 }
