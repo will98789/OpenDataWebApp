@@ -54,14 +54,26 @@ body{
   width: 100%;
 }
 
-div.menuIcon{
-  width: 3%;
+.menuIcon{
+  width: 3vw;
   object-fit: fill;
-  margin-top: 1%;
-  margin-left: 1%;
-  position: fixed;
+  left: 0;
+  top: 0;
+  margin-top: 1vw;
+  margin-left: 1vw;
 }
 
+#openMenu {
+  position: fixed;
+  content: url('assets/menu_icon.svg');
+}
+
+#closeMenu {
+  padding:0 0 0 0;
+  content:url('assets/menu_icon_dark.svg');
+  border-bottom: none;
+  border-top: none;
+}
 
 /* The side navigation menu */
 .sideNav {
@@ -73,7 +85,6 @@ div.menuIcon{
   left: 0;
   background-color: #FCF7F8;
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 20px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
@@ -89,14 +100,6 @@ div.menuIcon{
   border-top: 1px solid rgba(255,255,255,.2);
 }
 
-#closeMenu {
-  width:3vw;
-  content:url('assets/menu_icon_dark.svg');
-  padding: 0 0 0 20px;
-  transition: 0s;
-  border-bottom: none;
-  border-top: none;
-}
 
 .sidenav a:hover {
   color: #0B80C3;
