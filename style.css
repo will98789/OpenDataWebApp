@@ -55,12 +55,10 @@ body{
 }
 
 div.menuIcon{
-  content: url("assets/menu_icon.svg");
   width: 3%;
   object-fit: fill;
   margin-top: 1%;
   margin-left: 1%;
-  transition: 0.5s;
   position: fixed;
 }
 
@@ -89,6 +87,15 @@ div.menuIcon{
   color: #283747;
   border-bottom: 1px solid rgba(0,0,0,.6);
   border-top: 1px solid rgba(255,255,255,.2);
+}
+
+#closeMenu {
+  width:3vw;
+  content:url('assets/menu_icon_dark.svg');
+  padding: 0 0 0 20px;
+  transition: 0s;
+  border-bottom: none;
+  border-top: none;
 }
 
 .sidenav a:hover {
