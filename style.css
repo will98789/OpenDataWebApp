@@ -182,6 +182,7 @@ div.container{
 .scrollBox table{
   border-style: none;
   display: table;
+  width: 100%;
 }
 
 .scrollBox tbody{
