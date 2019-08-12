@@ -10,12 +10,57 @@
   <body class="loadIn">
     <div class="menuIcon" id="openMenu" onclick="openNav()"></div>
     <div id="sideNav" class="sideNav">
+      <a onclick="closeNav()" id="closeMenu"/></a>
+      <h1>Menu</h1>
+      <ul>
+        <li>
+          Home
+        </li>
+        <li>
+          Documents
+          <ul id="documentList">
+            <li>
+              Item 1
+            </li>
+            <li>
+              Item 2
+            </li>
+            <li>
+              Item 3
+            </li>
+          </ul>
+        </li>
+        <li>
+          Interactive
+          <ul id="interactiveList">
+            <li>
+              Item 1
+            </li>
+            <li>
+              Item 2
+            </li>
+            <li>
+              Item 3
+            </li>
+          </ul>
+        </li>
+        <li>
+          Notebooks
+          <ul id="notebooksList">
+            <li>
+              Item 1
+            </li>
+            <li>
+              Item 2
+            </li>
+            <li>
+              Item 3
+            </li>
+          </ul>
+        </li>
+      </ul>
       <a onclick="closeNav()" class="menuIcon" id="closeMenu"/></a>
       <h1 style="color: black;">Menu</h1>
-      <a href="docs/atlas_detector/index.html">1</a>
-      <a href="#">2</a>
-      <a href="#">3</a>
-      <a href="#">4</a>
     </div>
     <div class="header">
       <img class="logoImage" src="assets/logos.png"/>
