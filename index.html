@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   </head>
   <body class="loadIn">
-    <div class="menuIcon" onclick="openNav()" style="content: url('assets/menu_icon.svg');"></div>
+    <div class="menuIcon" id="openMenu" onclick="openNav()"></div>
     <div id="sideNav" class="sideNav">
       <a onclick="closeNav()" id="closeMenu"/></a>
       <h1>Menu</h1>
@@ -59,6 +59,8 @@
           </ul>
         </li>
       </ul>
+      <a onclick="closeNav()" class="menuIcon" id="closeMenu"/></a>
+      <h1 style="color: black;">Menu</h1>
     </div>
     <div class="header">
       <img class="logoImage" src="assets/logos.png"/>
