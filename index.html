@@ -8,10 +8,10 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   </head>
   <body class="loadIn">
-    <div class="menuIcon" onclick="openNav()" style="content: url('assets/menu_icon.svg');"></div>
+    <div class="menuIcon" id="openMenu" onclick="openNav()"></div>
     <div id="sideNav" class="sideNav">
-      <a onclick="closeNav()" id="closeMenu"/></a>
-      <h1>Menu</h1>
+      <a onclick="closeNav()" class="menuIcon" id="closeMenu"/></a>
+      <h1 style="color: black;">Menu</h1>
       <a href="docs/atlas_detector/index.html">1</a>
       <a href="#">2</a>
       <a href="#">3</a>
