@@ -19,7 +19,8 @@ async function createWindow () {
   win.center();
   // and load the index.html of the app
   win.loadFile('loading.html');
-  await sleep(500);
+  //Sleep in milliseconds for loading screen
+  await sleep(2000);
   let iwin = new BrowserWindow({
     width: width*0.9,
     height: height*0.9,
