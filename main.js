@@ -25,6 +25,8 @@ async function createWindow () {
     width: width*0.9,
     height: height*0.9,
     frame: true,
+    'minHeight': height*0.8,
+    'minWidth': width*0.8,
     webPreferences: {
       nodeIntegration: true
     }
