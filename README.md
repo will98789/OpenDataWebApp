@@ -21,9 +21,13 @@ To clone and run this repository you'll need [Git](https://git-scm.com) and [Nod
 # Clone this repository
 git clone https://github.com/will98789/OpenDataWebApp
 # Go into the repository
-cd electron_book
+cd OpenDataWebApp
 # Install dependencies
 npm install
 # Run the app
 npm start
 ```
+
+##Using the application
+
+After loading up the application, just click on one of the options.
