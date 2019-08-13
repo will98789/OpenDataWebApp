@@ -1,0 +1,710 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>Python framework - ATLAS Open Data Guide 2019</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.4031d38b.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#atlas-open-data-python-framework-for-13-tev-analyses" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="ATLAS Open Data Guide 2019" class="md-header-nav__button md-logo">
+          
+            <img src="../../images/outline_80_white.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              ATLAS Open Data Guide 2019
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Python framework
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/veritasalice/ATLASOpenDataGuide/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="ATLAS Open Data Guide 2019" class="md-nav__button md-logo">
+      
+        <img src="../../images/outline_80_white.png" width="48" height="48">
+      
+    </a>
+    ATLAS Open Data Guide 2019
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/veritasalice/ATLASOpenDataGuide/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../datasets/" title="Datasets" class="md-nav__link">
+      Datasets
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../C++/cpp/" title="C++ framework" class="md-nav__link">
+      C++ framework
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../C++/times/" title="C++ notes" class="md-nav__link">
+      C++ notes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Python framework
+      </label>
+    
+    <a href="./" title="Python framework" class="md-nav__link md-nav__link--active">
+      Python framework
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about" title="About" class="md-nav__link">
+    About
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gitlab-repository" title="GitLab repository" class="md-nav__link">
+    GitLab repository
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-usage" title="General Usage" class="md-nav__link">
+    General Usage
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analysis" title="Analysis" class="md-nav__link">
+    Analysis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plotting" title="Plotting" class="md-nav__link">
+    Plotting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../vm/" title="Virtual Machines" class="md-nav__link">
+      Virtual Machines
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../document/" title="Documentation" class="md-nav__link">
+      Documentation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../GitBook/SUMMARY/" title="GitBook" class="md-nav__link">
+      GitBook
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about" title="About" class="md-nav__link">
+    About
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gitlab-repository" title="GitLab repository" class="md-nav__link">
+    GitLab repository
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-usage" title="General Usage" class="md-nav__link">
+    General Usage
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analysis" title="Analysis" class="md-nav__link">
+    Analysis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plotting" title="Plotting" class="md-nav__link">
+    Plotting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/veritasalice/ATLASOpenDataGuide/edit/master/docs/Python/python.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="atlas-open-data-python-framework-for-13-tev-analyses">ATLAS Open Data Python framework for 13 TeV analyses</h1>
+<h2 id="about">About</h2>
+<p>This is an analysis code that may be used to analyse the data of the ATLAS published dataset.</p>
+<h2 id="gitlab-repository">GitLab repository</h2>
+<ul>
+<li><a href="https://gitlab.cern.ch/meevans/ATLASDatasetTools13">ATLASDatasetTools13</a></li>
+<li><code>git clone https://gitlab.cern.ch/meevans/ATLASDatasetTools13.git</code></li>
+</ul>
+<h2 id="general-usage">General Usage</h2>
+<h3 id="analysis">Analysis</h3>
+<p>The files in the root directory of the installation are the various run scripts. Configuration files can be found in the <em>Configurations</em> folder.</p>
+<p>As a first test to check whether everything works fine you can simply run a preconfigured analyis via</p>
+<blockquote>
+<pre><code>python RunScript.py -s "Zmumu"
+</code></pre>
+</blockquote>
+<p>What you have done here is to run the code in single core mode and specifying that you only want to analyse the Zmumu sample
+as defined in the Configurations/2lepConfiguration.py.
+The runscript has several options which may be displayed by typing</p>
+<blockquote>
+<pre><code>python RunScript.py --help
+</code></pre>
+</blockquote>
+<p>The options include:</p>
+<blockquote>
+<pre><code>-a,            --analysis              overrides the analysis that is stated in the configuration file
+-s,            --samples               comma separated string that contains the keys for a subset of processes to run over
+-p,            --parallel              enables running in parallel (default is single core use)
+-n NWORKERS,   --nWorkers NWORKERS     specifies the number of workers if multi core usage is desired (default is 4)
+-c CONFIGFILE, --configfile CONFIGFILE specifies the config file to be read (default is Configurations/Configuration.py)
+-o OUTPUTDIR,  --output OUTPUDIR       specifies the output directory you would like to use instead of the one in the configuration file
+</code></pre>
+</blockquote>
+<p>The XConfiguration.py files specify how an analysis should behave. The Job portion of the configuration looks like this:</p>
+<blockquote>
+<pre><code> Job = {
+     "Batch"           : True,              (switches progress bar on and off, forced to be off when running in parallel mode)
+     "Analysis"        : "ZAnalysis",   (names the analysis to be executed)
+     "Fraction"        : 0.000001,                 (determines the fraction of events per file to be analysed)
+     "MaxEvents"       : 1234567890,        (determines the maximum number of events per file to be analysed)
+     "OutputDirectory" : "results/"         (specifies the directory where the output root files should be saved)
+ }
+</code></pre>
+</blockquote>
+<p>The second portion of the configuration file specifies which
+The locations of the individual files that are to be used for the different
+processes can be set es such:</p>
+<blockquote>
+<pre><code>Processes = {
+    # Diboson processes 2lep                                                                                                                     &gt;         "WWlvlv"                            : "/eos/project/a/atlas-outreach/projects/open-data/OpenDataTuples/2lep/MC/mc15_13TeV.361600.PwPy8EG_CT10nloME_AZNLOCTEQ6L1_WWlvlv.2lep_raw.root", (single file)
+    ...
+    "data_2lep"                        : "/eos/project/a/atlas-outreach/projects/open-data/OpenDataTuples/2lep/Data/data*_2lep.root",    (potentially many files)
+}
+</code></pre>
+</blockquote>
+<p>The files associated with the processes are found via python's glob module, enabling the use of unix style wildcards.</p>
+<p>The names chosen for the processes are important as they are the keys that are used later in the <em>infofile.py</em> to determine the necessary
+scaling factors for correct plotting.</p>
+<p>Now we want to run over the full set of available samples. For this simply type:</p>
+<blockquote>
+<pre><code>python RunScript.py
+</code></pre>
+</blockquote>
+<p>Use the options -p and -n if you have a multi core system and want to use multiple cores.
+Execution times are between ? to ? hours in single core mode or ~ ? minutes in multi core mode.</p>
+<h3 id="plotting">Plotting</h3>
+<p>Results may be plotted via:</p>
+<blockquote>
+<p>python PlotResults.py Configuration/PlotConf_AnalysisName.py</p>
+</blockquote>
+<p>In our example case the name of the analysis is <em>ZAnalysis</em>, so type:</p>
+<blockquote>
+<p>python PlotResults.py Configuration/PlotConf_ZAnalysis.py</p>
+</blockquote>
+<p>The resulting histograms will be put into the <em>Output</em> directory.</p>
+<p>The plotting configuration file enables the user to steer the plotting process.
+Each analysis has its own plotting configuration file to accomodate changes in background composition or histograms that the user may want to plot.</p>
+<p>General information for plotting include the <em>Luminosity</em> and <em>InputDirectory</em> located at the top of the file:</p>
+<blockquote>
+<pre><code>  config = {
+      "Luminosity"     : 10064,
+      "InputDirectory" : "results",
+      ...
+</code></pre>
+</blockquote>
+<p>The names of the histograms to be drawn can be specified like so:</p>
+<blockquote>
+<pre><code> "Histograms" : {
+     "etmiss"          : {rebin : 4, log_y : True},
+     "lep_n"           : {rebin : 5},
+     "lep_pt"          : {},
+ ...
+</code></pre>
+</blockquote>
+<p>Note that it is possible to supply additional information via a dictionary like structure to further detail the per histogram options.
+Currently available options are:</p>
+<blockquote>
+<pre><code>rebin    : int   - used to merge X bins into one. Useful in low statistics situations
+log_y    : bool  - if True is set as the bool the main depiction will be drawn in logarithmic scale
+y_margin : float - sets the fraction of whitespace above the largest contribution in the plot. Default value is 0.1.
+</code></pre>
+</blockquote>
+<h1 id="definition-of-paintables-and-depictions">Definition of Paintables and Depictions</h1>
+<p>Each Plot consists of several <em>depictions</em> of <em>paintables</em>.
+A depiction is a certain standard type of visualising information. Availabe depictions include simple plots, ratios and agreement plots.
+A paintable is a histogram or stack with added information such as colors and which processes contribute to said histogram.
+A simple definition of paintables may look like this:</p>
+<blockquote>
+<pre><code>'Paintables': {
+    "Stack": {
+        "Order"     : ["Diboson", "W", "Z", "single top", "ttbar"],
+        "Processes" : {                
+            "Diboson" : {
+                "Color"         : "#fa7921",
+                "Contributions" : ["WWlvlv", "WWlvqq", "WZlvll", "WZlvvv", "WZqqll", "WZlvqq", "ZZllll", "ZZvvll", "ZZqqll"]},
+            ...
+    },
+
+    'Higgs': {
+        'Color': '#0000ff',
+        'Contributions': ['ggH125_WW2lep']},
+
+    "data" : {
+        "Contributions": ["dataA_2lep", "dataB_2lep", "dataC_2lep", "dataD_2lep"]}
+</code></pre>
+</blockquote>
+<p><em>Stack</em> and <em>data</em> are specialised names for <em>paintables</em>. This ensures that only one stack and one data representation are present in the visual results.
+A <em>Stack</em> shows the different processes specified in "order" stacked upon each other to give an idea of the composition of the simulated data.
+The definitions for these individual processes are defined under "Processes". Each process has a certain colour and a list of contributing parts
+that comprise it. These contributing parts have to fit the keys used in both the run configuration and the <em>infofile.py</em>.</p>
+<p><em>data</em> is a specialised <em>paintable</em> which is geared toward the standard representation of data. Since the data does not need to be scaled there is no need
+to align the used names in contributions with those found in the <em>infofile.py</em>. However, they still have to fit the ones used in the <em>configuration.py</em>.</p>
+<p>All otherwise named paintables (like "Higgs" in the example) are considered as "overlays". Overlays are used to show possible signals or to compare shapes
+between multiple overlays (see for instance in the HWWAnalysis).</p>
+<p>The paintables can be used in depictions like so:</p>
+<blockquote>
+<pre><code>"Depictions": {
+    "Order"       : ["Main", "Data/MC", "S/B"],
+    "Definitions" : {
+        "Data/MC": {
+            "type"       : "Agreement",
+            "Paintables" : ["data", "Stack"]},
+
+        "Main": {
+            "type"      : "Main",
+            "Paintables": ["Stack", "data"]},
+
+        'S/B': {
+            'type'       : 'Ratio',
+            'Paintables' : ['Higgs', 'Stack']},
+    }
+</code></pre>
+</blockquote>
+<p>There are currently three types of depictions available: <em>Main</em>, <em>Agreement</em> and <em>Ratio</em>.
+Main type plots will simply show the paintables in a simple plot fashion.
+Ratio type plots will show the ratio of the first paintable w.r.t. the second paintable.
+Agreement type plots are typically used to evaluate the agreement between two paintables (usually the stack of predictions and the data).</p>
+<p>The order of the depictions is determined in line 2 of the code example above.</p>
+<h2 id="in-depth-information">In Depth Information</h2>
+<h3 id="analysis-code">Analysis Code</h3>
+<p>The analysis code is located in the <em>Analysis</em> folder.
+It will be used to write out histograms for the individual input files which
+will be used for plotting purposes later.</p>
+<p>The basic code implementing the protocol to read the files and how the objects can be read is in <em>Tuplereader.py</em>.
+Have a look there to see which information is available.
+The general analysis flow can be found in <em>Job.py</em> whereas the base class for all concrete analyses is located in  <em>Analysis.py</em>.</p>
+<p>It is recommended to start out by modifying one of the existing analyses, e.g. the ZAnalysis located in <em>ZAnalysis.py</em>.
+If you want to add an analysis, make sure that the filename is the same as the class name, otherwise the code will not work.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../C++/times/" title="C++ notes" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                C++ notes
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../vm/" title="Virtual Machines" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Virtual Machines
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.ffb616e8.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

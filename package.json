@@ -6,7 +6,8 @@
     "start": "electron ."
   },
   "dependencies": {
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "markdown-it": "^9.1.0"
   },
   "author": "",
   "license": "ISC",

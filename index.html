@@ -6,10 +6,60 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="index.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
   </head>
   <body class="loadIn">
     <div class="menuIcon" id="openMenu" onclick="openNav()"></div>
     <div id="sideNav" class="sideNav">
+      <a onclick="closeNav()" id="closeMenu"/></a>
+      <h1>Menu</h1>
+      <ul>
+        <li>
+          Home
+        </li>
+        <li>
+          Documents
+          <ul id="documentationList">
+            <li>
+              Item 1
+            </li>
+            <li>
+              Item 2
+            </li>
+            <li>
+              Item 3
+            </li>
+          </ul>
+        </li>
+        <li>
+          Interactive
+          <ul id="interactiveList">
+            <li>
+              Item 1
+            </li>
+            <li>
+              Item 2
+            </li>
+            <li>
+              Item 3
+            </li>
+          </ul>
+        </li>
+        <li>
+          Notebooks
+          <ul id="notebooksList">
+            <li>
+              Item 1
+            </li>
+            <li>
+              Item 2
+            </li>
+            <li>
+              Item 3
+            </li>
+          </ul>
+        </li>
+      </ul>
       <a onclick="closeNav()" class="menuIcon" id="closeMenu"/></a>
       <h1 class="titleText">Menu</h1>
       <a href="index.html">index.html</a>
@@ -22,7 +72,7 @@
     </div>
     <div class="container">
       <!-- Ander wrote this bit. Note how the id's are used as classes and the classes are used as Ids -->
-      <button type="button" class="button" id="buttond" onclick="location.href='docs/atlas_detector/index.html'" style="min-width: 250px; width: 50vh;">Documentation
+      <button type="button" class="button" id="buttond" onclick="location.href='docs.html'" style="min-width: 250px; width: 50vh;">Documentation
         <div id="docs"></div></button>
       <button type="button" class="button" id="buttoni" onclick="location.href='interactive.html'" style="margin: 0 5%;min-width: 250px;width: 50vh;">Interactive
         <div id="interactive"></div></button>
