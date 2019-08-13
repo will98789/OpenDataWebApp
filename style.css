@@ -15,6 +15,7 @@ body{
 
 
 .container{
+  margin-top: 5%;
   margin-right: 5%;
 }
 
@@ -42,6 +43,7 @@ body{
   margin-right:25%;
   margin-top: 2%;
   margin-bottom: 2%;
+  font-size:30px;
 }
 
 .title{
@@ -49,6 +51,7 @@ body{
   margin-bottom: 5vh;
   width:100%;
   text-align: center;
+  font-size: 30px;
 }
 
 .logoImage{
@@ -102,8 +105,8 @@ body{
 }
 
 
-.sidenav a:hover {
-  color: #0B80C3;
+#sidenav a:hover {
+  background-color: red;
 }
 
 /* Position and style the close button (top right corner) */
@@ -215,4 +218,17 @@ div.container{
 
 .content{
   width: 100%;
+}
+
+.titleText{
+  color: #283747;
+  margin-left: 3%;
+  margin-top: 10%;
+  margin-bottom: 2%;
+}
+
+.ibutton {
+  width: 70%;
+  margin-left:15%;
+  font-size: 15px;
 }
