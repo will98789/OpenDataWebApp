@@ -10,8 +10,9 @@ Snow white: FCF7F8*/
 body{
   background-color: #283747 ;
   color: #FCF7F8;
-  font-family: OpenSans, sans-serif;
+  font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif !important;
 }
+
 
 .container{
   margin-right: 5%;
@@ -130,6 +131,7 @@ body{
   color: #FCF7F8;
   transition: 0.2s;
   font-size: 30px;
+  font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif !important;
 }
 
 .button:hover{
