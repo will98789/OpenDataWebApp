@@ -43,15 +43,15 @@ body{
   margin-right:25%;
   margin-top: 2%;
   margin-bottom: 2%;
-  font-size:30px;
 }
 
 .title{
   margin-top: 4vh;
   margin-bottom: 5vh;
   width:100%;
+  font-size: 4em;
   text-align: center;
-  font-size: 30px;
+  font-weight: 300 !important;
 }
 
 .logoImage{
@@ -135,6 +135,7 @@ body{
   transition: 0.2s;
   font-size: 30px;
   font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+  font-weight: 300;
 }
 
 .button:hover{
@@ -188,7 +189,7 @@ div.container{
   margin-right: 6%;
   background-color: #FCF7F8;
   border-radius: 2px;
-  overflow: scoll;
+  overflow-y: auto;
   text-decoration: none;
   height: 50vh;
   color: black;
