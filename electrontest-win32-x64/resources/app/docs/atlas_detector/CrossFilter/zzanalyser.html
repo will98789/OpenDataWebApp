@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Crossfilter for ATLAS Outreach Prototype</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/dc.css"/>
+  </head>
+  <style>
+  .dc-chart g.row text {
+      fill: black;
+      font-size: 120%;
+  }
+  table { border-collapse:collapse; }
+  table thead th { border-bottom: 1px solid #000; }
+/*  #hist9 tr:nth-child(odd) {background-color: #CCCCCC;}
+  #hist9 tr:nth-child(1)   {background-color: #FFFFFF;}
+*/
+/*  #hist9 tr:nth-child(2) {background-color: #1C5EA8;}
+  #hist9 tr:nth-child(3) {background-color: #F66A00;}
+  #hist9 tr:nth-child(4) {background-color: #2A9000;}
+  #hist9 tr:nth-child(5) {background-color: #C31318;}
+*/
+  
+  #hist9 {
+    font-size: 100%;
+    padding-top: 20px;
+    padding-left: 20px;
+  } 
+ </style>
+
+  <body>
+    <div style="width:1050px">
+<table style="width:100%">
+  <tr style="height: 50px">
+    <td valign="bottom">invMass1 [GeV]</td>
+    <td valign="bottom">invMass2 [GeV]</td>
+  </tr>
+  <tr>
+    <td><div id="hist1"></div></td>
+    <td><div id="hist2"></div></td>
+  </tr>
+  <tr style="height: 50px">
+    <td valign="bottom">invMass [GeV]</td>
+    <td valign="bottom">fraction</td>
+  </tr>
+  <tr>
+    <td><div id="hist3"></div></td>
+    <td><div id="hist4"></div></td>
+  </tr>
+
+ </table>
+</div>
+
+    <script charset="utf-8" type="text/javascript" src="js/d3.js"></script>
+    <script charset="utf-8" type="text/javascript" src="js/crossfilter.js"></script>
+    <script charset="utf-8" type="text/javascript" src="js/dc.js"></script>
+    <script charset="utf-8" type="text/javascript">
+
+      d3.csv("newData.csv", function(error, events) {
+
+          events.forEach(function(x) {
+             x.weight = +x.weight;
+          });
+         
+
+          function add_by_channel(p, v) {
+                 p[v.type] = (p[v.type] || 0) + v.weight;
+                 return p;
+          }
+
+          function remove_by_channel(p, v) {
+                 p[v.type] = (p[v.type] || 0) - v.weight;
+                 return p;
+          }
+
+          function initial(p, v) {
+            return [0,0,0];
+          }
+          
+          var colorScale = d3.scale.ordinal().range(["#1C5EA8","#F66A00","#FFFFFF"]);
+          var ndx                 = crossfilter(events),
+              typeDimension       = ndx.dimension(function(d) {return +d.type;}),
+              fractionDimension   = ndx.dimension(function(d) {return +Math.floor(d.fraction*0.1)*10;}),
+              invMass1Dimension   = ndx.dimension(function(d) {return +Math.floor(d.invMass1*0.2)*5;})
+              invMass2Dimension   = ndx.dimension(function(d) {return +Math.floor(d.invMass2*0.2)*5;}),
+              invMassDimension    = ndx.dimension(function(d) {return +Math.floor(d.invMass*0.2)*5;}),
+              invMass1Group       = invMass1Dimension.group().reduce(add_by_channel,remove_by_channel, initial),
+              invMass2Group       = invMass2Dimension.group().reduce(add_by_channel,remove_by_channel, initial),
+              invMassGroup        = invMassDimension.group().reduce(add_by_channel,remove_by_channel, initial),
+              fractionGroup       = fractionDimension.group().reduce(add_by_channel,remove_by_channel, initial),
+              typeGroup           = typeDimension.group().reduce(add_by_channel,remove_by_channel, initial)
+              // SignificanceGroup         = typeDimension.groupAll().reduce(
+              //     function (p, v) {
+              //         if (v.type == 0) p.sig += v.weight;
+              //         else p.bkg += v.weight;
+              //         return p;
+              //     },
+              //     function (p, v) {
+              //         if (v.type == 0) p.sig -= v.weight;
+              //         else p.bkg -= v.weight;
+              //         return p;
+              //     },
+              //     function () { return {sig:0, bkg:0}; }
+              // );
+            
+           function sel_stack(i) {
+               return function(d) {
+                   return d.value[i];
+               };
+           }
+          
+           function type(i){
+              if (i == "0") return "ZZ";
+              if (i == "1") return "H(125) &darr; ZZ";
+              if (i == "2") return "data";
+              return "default"
+           }
+                    
+           function make_barchart( location, domain, label, dimension, group ){
+             var chart = dc.barChart(location)
+             var endwid = 5
+             chart.width(350)
+                  .height(250)
+                  .x(d3.scale.linear().domain(domain))
+                  .margins({left: 50, top: 10, right: 10, bottom: 35})
+                  .brushOn(true)
+                  .elasticY(true)
+                  .colors(colorScale)
+                  .xAxisLabel(label)
+                  .yAxisLabel("Events")
+                  .yAxisPadding("35%")
+                  .clipPadding(10)
+                  .dimension(dimension)
+                  .group(group, "ZZ",   sel_stack('0'))
+                  .stack(group, "H125ZZ",  sel_stack('1'))
+                  .on('renderlet', function(chart) {
+                    chart.selectAll('.x-axis-label').attr('transform', 'translate(345,238)').attr('text-anchor', 'end');
+                    chart.selectAll('.y-axis-label').attr('transform', 'rotate(-90), translate(-30,12)');
+                    var barWidth = chart.select('rect.bar').attr('width');
+                    var bar = chart.g().select('g.chart-body').selectAll('g.errorbar')
+                    .data(group.all())
+                    .enter()
+                      .append('g')
+                      .attr('class', 'errorbar');
+                    bar
+                      .append('line')
+                      .attr({
+                        'class' : 'errorwidth',
+                        'stroke-width': 1,
+                        stroke: 'black',
+                        x1: function(d) { return chart.x()(d.key)+barWidth*0.5;},
+                        x2: function(d) { return chart.x()(d.key)+barWidth*0.5;},
+                        y1: function(d) { console.log(d.value); return chart.y()(d.value[2] + Math.sqrt(d.value[2])); },
+                        y2: function(d) { return chart.y()(d.value[2] - Math.sqrt(d.value[2])); }
+                      });
+                    bar.append('line')
+                      .attr({
+                        'class' : 'lowererror',
+                        'stroke-width': 1,
+                        stroke: 'black',
+                        x1: function(d) { return chart.x()(d.key)+barWidth*0.5 - endwid;},
+                        x2: function(d) { return chart.x()(d.key)+barWidth*0.5 + endwid; },
+                        y1: function(d) { return chart.y()(d.value[2] - Math.sqrt(d.value[2]));},
+                        y2: function(d) { return chart.y()(d.value[2] - Math.sqrt(d.value[2]));}
+                      });
+                    bar.append('line')
+                      .attr({
+                        'class' : 'uppererror',
+                        'stroke-width': 1,
+                        stroke: 'black',
+                        x1: function(d) { return chart.x()(d.key)+barWidth*0.5 - endwid;},
+                        x2: function(d) { return chart.x()(d.key)+barWidth*0.5 + endwid;},
+                        y1: function(d) { return chart.y()(d.value[2] + Math.sqrt(d.value[2]));},
+                        y2: function(d) { return chart.y()(d.value[2] + Math.sqrt(d.value[2]));}
+                      });
+                    bar.append('circle')
+                      .attr({
+                        stroke: 'black',
+                        cx: function(d) { return chart.x()(d.key)+barWidth*0.5;},
+                        cy: function(d) { return chart.y()(d.value[2]);},
+                        r: function(d)  { return 2;}
+                      });
+                  })
+                      .on('pretransition', function(chart) {
+                        var barWidth = chart.select('rect.bar').attr('width');
+                        var bar = chart.g().select('g.chart-body').selectAll('g.errorbar')
+                                  .data(group.all())
+                                  .transition()
+                                  .duration(750)
+                        
+                        bar.select('circle').attr({cy: function(d) { return chart.y()(d.value[2]);}});
+                        bar.select('line.errorwidth')
+                          .attr({
+                            y1: function(d) { return chart.y()(d.value[2] + Math.sqrt(d.value[2])); },
+                            y2: function(d) { return chart.y()(d.value[2] - Math.sqrt(d.value[2])); }
+                          });
+                        bar.select('line.lowererror')
+                          .attr({
+                            y1: function(d) { return chart.y()(d.value[2] - Math.sqrt(d.value[2]));},
+                            y2: function(d) { return chart.y()(d.value[2] - Math.sqrt(d.value[2]));}
+                          });
+                        bar.select('line.uppererror')
+                          .attr({
+                            y1: function(d) { return chart.y()(d.value[2] + Math.sqrt(d.value[2]));},
+                            y2: function(d) { return chart.y()(d.value[2] + Math.sqrt(d.value[2]));}
+                          });
+
+
+                  });
+                  
+                  
+             return chart
+          }
+                                            
+          var invMass1Chart = make_barchart("#hist1", [60,120], "invMass1", invMass1Dimension, invMass1Group)
+          invMass1Chart.xUnits(dc.units.fp.precision(5));
+          invMass1Chart.centerBar(false)
+
+          var invMass2Chart = make_barchart("#hist2", [0,120], "invMass2", invMass2Dimension, invMass2Group)
+          invMass2Chart.xUnits(dc.units.fp.precision(5));
+          invMass2Chart.centerBar(false)
+          invMass2Chart.legend(dc.legend().x(270).y(10).itemHeight(20).gap(5))     
+
+          var invMassChart = make_barchart("#hist3", [100,200], "invMass", invMassDimension, invMassGroup)
+          invMassChart.xUnits(dc.units.fp.precision(5));
+          invMassChart.centerBar(false)
+          // invMassChart.legend(dc.legend().x(270).y(10).itemHeight(20).gap(5))
+
+          var typeChart = make_barchart("#hist4", [0,100], "fraction in %", fractionDimension, fractionGroup)
+          typeChart.centerBar(false)
+          typeChart.xUnits(dc.units.fp.precision(10));
+
+      //     var mcCompChart = dc.rowChart("#hist9")
+      //     mcCompChart.width(350).height(250)
+      //                .margins({left: 5, top: 10, right: 10, bottom: 57})
+      //                .x(d3.scale.log().domain([0,1000]))
+      //                .title("Process")
+      //                .dimension(typeDimension)
+      //                .group(compGroup)
+      //                .label(function(d) {
+      //                       val = type(d.key) + " (" + d.value.toFixed(0) + ")"
+      //                       return (d.key != 0) ? val : val + "    Significance: " + significance(SignificanceGroup.value()).toFixed(3)
+      //                })
+      //
+      //                .elasticX(true)
+      //                .colors(colorScale)
+      //                .on('renderlet', function (chart) {
+      //                    chart.selectAll('g.axis text').attr('transform', 'translate(-10,10) rotate(315)');
+      //                });
+      //
+      // var significance = function(d) {
+      //     return d.sig/Math.sqrt(d.bkg);
+      //  };
+
+
+      dc.renderAll();
+
+      });
+
+    </script>
+
+  </body>
+</html>
+
