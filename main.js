@@ -13,7 +13,7 @@ function sleep(ms) {
 async function createWindow (width,height) {
   // Create the browser window.
   let win = new BrowserWindow({
-    width: width*0.8,
+    width: width*0.9,
     height: height*0.9,
     frame: false,
     webPreferences: {
@@ -26,10 +26,10 @@ async function createWindow (width,height) {
   //Sleep in milliseconds for loading screen
   await sleep(2000);
   let iwin = new BrowserWindow({
-    width: width*0.8,
+    width: width*0.9,
     height: height*0.9,
     'minHeight': height*0.8,
-    'minWidth': width*0.7,
+    'minWidth': width*0.8,
     webPreferences: {
       nodeIntegration: true
     }

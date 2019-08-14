@@ -18,7 +18,7 @@ function getDocs(){
   for(var i = 0; i < files.length; i++){
     //Each folder needs to contain an info.json to interpret, with the file name, description and the entry file for that piece of documentation
     var json = JSON.parse(fs.readFileSync('docs/'+files[i]+'/info.json', 'utf8'));
-    list.innerHTML += "<tr onclick=\"location.href='docs/"+files[i]+"/index.html'\" class='docListItem'><td style=\"width:20%\">"+json.docName+"</td><td>"+json.description+"</td></tr>";
+    list.innerHTML += "<tr onclick=\"location.href='docs/"+files[i]+"/index.html'\" class='docListItem'><td style=\"width:20%\">"+json.docName+"</td><td><i>"+json.description+"</i></td></tr>";
   }
 }
 
