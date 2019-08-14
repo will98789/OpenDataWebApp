@@ -1,0 +1,38 @@
+.button{
+    display: inline-block;
+    flex:1;
+    border: none;
+    background-color: #0B80C3;
+    /*min-height: 250px;*/
+    height:20vh;
+    color: #FCF7F8;
+    transition: 0.2s;
+    font-size: 30px;
+    width: 29.7%
+  } 
+
+.buttoncontainer{
+  margin-top: 50px;
+  width: 100%; 
+  height: 20vh; 
+  display: flex;
+} 
+
+#swan{
+  content:url("../../assets/swan.png");
+  width:30%;
+  margin-left:35%;
+  margin-top:15%;
+}
+#binder{
+  content:url("../../assets/binder.png");
+  width: 30%;
+  margin-left: 35%;
+  margin-top:15%;
+}
+#local{
+  content:url("../../assets/jupyter_light.png");
+  width:30%;
+  margin-left:35%;
+  margin-top: 13%;
+}
