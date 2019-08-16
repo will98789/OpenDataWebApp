@@ -31,3 +31,22 @@ npm start
 ##Using the application
 
 After loading up the application, just click on one of the options.
+
+##Compiling the electron application
+
+#Installing electron-packager
+
+Navigate to the directory of the applicaiton and Run
+```bash
+# For use from the CLI
+npm install electron-packager -g
+```
+
+#Packaging for windows on windows
+
+```bash
+#For using the current directory as the source and everything else from the package.json
+electon-packager .
+```
+
+For more information on generating the package for other platforms refer to [https://github.com/electron/electron-packager#installation](https://github.com/electron/electron-packager#installation).
