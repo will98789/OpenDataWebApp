@@ -28,13 +28,13 @@ npm install
 npm start
 ```
 
-##Using the application
+## Using the application
 
 After loading up the application, just click on one of the options.
 
-##Compiling the electron application
+## Compiling the electron application
 
-#Installing electron-packager
+# Installing electron-packager
 
 Navigate to the directory of the applicaiton and Run
 ```bash
