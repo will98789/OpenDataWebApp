@@ -34,9 +34,11 @@ After loading up the application, just click on one of the options.
 
 ##Compiling the electron application
 
+
+
 #Installing electron-packager
 
-Navigate to the directory of the applicaiton and Run
+Navigate to the directory of the application and Run
 ```bash
 # For use from the CLI
 npm install electron-packager -g
@@ -45,7 +47,7 @@ npm install electron-packager -g
 #Packaging for windows on windows
 
 ```bash
-#For using the current directory as the source and everything else from the package.json
+#For using the current directory as the source and everything else from the package.json. the application can now be found within the application directory under a new folder called 'electrontest-win32-x64' or similar.
 electon-packager .
 ```
 
