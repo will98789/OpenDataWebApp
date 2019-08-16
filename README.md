@@ -32,9 +32,9 @@ npm start
 
 After loading up the application, just click on one of the options.
 
-## Compiling the electron application
+# Compiling the electron application
 
-# Installing electron-packager
+## Installing electron-packager
 
 Navigate to the directory of the applicaiton and Run
 ```bash
@@ -42,7 +42,7 @@ Navigate to the directory of the applicaiton and Run
 npm install electron-packager -g
 ```
 
-#Packaging for windows on windows
+## Packaging for windows on windows
 
 ```bash
 #For using the current directory as the source and everything else from the package.json
